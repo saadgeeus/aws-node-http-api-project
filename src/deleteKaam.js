@@ -8,25 +8,25 @@ const dynamoDb = DynamoDBDocumentClient.from(client);
 
 const deleteKaam = async (event) => {
   try {
-    // URL se ID nikalne ke liye (e.g., /delete/{id})
-    const { id } = event.pathParameters;
+    // API Gateway se ID nikalna
+    const id = event.pathParameters.id; 
 
     await dynamoDb.send(new DeleteCommand({
       TableName: "KaamKaro",
       Key: {
-        id: id, // DynamoDB mein jo Primary Key hai uska naam yahan likhein
+        id: id // Check karein ke aapki table ki Primary Key ka naam 'id' hi hai
       },
     }));
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: "Kaam delete ho gaya!", id }),
+      body: JSON.stringify({ message: "Kaam kamyabi se delete ho gaya!", id }),
     };
   } catch (err) {
     console.error(err);
     return {
       statusCode: 500,
-      body: JSON.stringify({ message: "Delete karne mein masla hua", error: err.message }),
+      body: JSON.stringify({ message: "Delete nahi ho saka", error: err.message }),
     };
   }
 };
