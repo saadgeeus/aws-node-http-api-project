@@ -38,6 +38,12 @@ functions:
       - httpApi:
           path: /kaam/{id}
           method: put
+  deleteKaam:
+    handler: src/deleteKaam.handler
+    events:
+      - httpApi:
+          path: src/kaam/{id}
+          method: delete
 
 resources:
   Resources:
