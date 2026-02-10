@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LondheShubham153/aws-node-http-api-project.git"
+    "url": "git+https://github.com/saadgeeus/aws-node-http-api-project.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LondheShubham153/aws-node-http-api-project/issues"
+    "url": "https://github.com/saadgeeus/aws-node-http-api-project/issues"
   },
-  "homepage": "https://github.com/LondheShubham153/aws-node-http-api-project#readme",
+  "homepage": "https://github.com/saadgeeus/aws-node-http-api-project#readme",
   "dependencies": {
     "aws-sdk": "^2.1267.0",
     "uuid": "^9.0.0"
