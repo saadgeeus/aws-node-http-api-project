@@ -1,18 +1,17 @@
 org: saadgeeus123
 app: aws-node-http-api-project
 service: aws-node-http-api-project
-frameworkVersion: '3'
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs20.x
   region: us-east-1
   iamRoleStatements:
     - Effect: Allow
       Action:
         - dynamodb:*
       Resource:
-        - arn:aws:dynamodb:us-east-1:626072240565:table/KaamKaro
+        - arn:aws:dynamodb:us-east-1:101257773740:table/KaamKaro
 
 functions:
   hello:
